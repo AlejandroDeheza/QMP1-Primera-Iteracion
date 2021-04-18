@@ -1,5 +1,39 @@
 # QMP1-Primera-Iteracion
 
+## Diagrama de clases
+
+<p align="center"> 
+<img src="QMP1-Primera-Iteracion.png">
+</p>
+
+
+## Pseudocodigo
+
+~~~
+
+class Atuendo{
+  List<Prenda> prendas
+  
+}
+
+class Prenda{
+  TipoPrenda tipo
+  CategoriaPrenda categoria
+  String materialConstruccion          ⚠️❔
+  int[] colorPrincipal = new int[3];   ⚠️❔
+  int[] colorSecundario = new int[3];
+}
+
+enum TipoPrenda{
+
+}
+
+enum CategoriaPrenda{
+
+}
+
+~~~
+
 ---
 
 # java-base-project
