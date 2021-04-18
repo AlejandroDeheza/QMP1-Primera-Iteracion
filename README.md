@@ -22,14 +22,36 @@ class Prenda{
   String materialConstruccion          ⚠️❔
   int[] colorPrincipal = new int[3];   ⚠️❔
   int[] colorSecundario = new int[3];
+  
+  
+  setTipo(TipoPrenda tipo){
+    TODO
+  }
+  
+  setCategoria(CategoriaPrenda categoria){
+    TODO
+  }
+  
+  setMaterialConstruccion(String materialConstruccion){
+    TODO
+  }
+  
+  setColorPrincipal(int color1, int color2, int color3){
+    TODO
+  }
+  
+  setColorSecundario(int color1, int color2, int color3){
+    TODO
+  }
 }
 
 enum TipoPrenda{
+  ZAPATO, CAMISA-MANGA-CORTA, PANTALON
+} //etc
 
-}
 
 enum CategoriaPrenda{
-
+  PARTE-SUPERIOR, CALZADO, PARTE-INFERIOR, ACCESORIOS
 }
 
 ~~~
