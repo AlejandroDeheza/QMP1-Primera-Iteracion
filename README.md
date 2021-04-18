@@ -25,23 +25,23 @@ class Prenda{
   
   
   setTipo(TipoPrenda tipo){
-    TODO
+    TODO ❕
   }
   
   setCategoria(CategoriaPrenda categoria){
-    TODO
+    TODO ❕
   }
   
   setMaterialConstruccion(String materialConstruccion){
-    TODO
+    TODO ❕
   }
   
   setColorPrincipal(int color1, int color2, int color3){
-    TODO
+    TODO ❕
   }
   
   setColorSecundario(int color1, int color2, int color3){
-    TODO
+    TODO ❕
   }
 }
 
@@ -52,6 +52,45 @@ enum TipoPrenda{
 
 enum CategoriaPrenda{
   PARTE-SUPERIOR, CALZADO, PARTE-INFERIOR, ACCESORIOS
+}
+
+class builderPrenda{
+  Prenda prenda
+  
+  
+  crearNuevaPrenda(){
+    prenda = new Prenda();
+  }
+  
+  getPrenda(){
+    return prenda;
+  }
+  
+  
+  
+  
+  
+  setTipo(TipoPrenda tipo){
+    prenda.setTipo(tipo)
+  }
+  
+  setCategoria(CategoriaPrenda categoria){
+    prenda.setCategoria(categoria)
+  }
+  
+  setMaterialConstruccion(String materialConstruccion){
+    prenda.setMaterialConstruccion(materialConstruccion)
+  }
+  
+  setColorPrincipal(int color1, int color2, int color3){
+    prenda.setColorPrincipal(color1, color2, color3)
+  }
+  
+  setColorSecundario(int color1, int color2, int color3){
+    prenda.setColorSecundario(color1, color2, color3)
+  }
+  
+
 }
 
 ~~~
