@@ -61,7 +61,7 @@ class builderPrenda{
   getPrenda(){
   
     if(!prenda.tipo || !prenda.materialConstruccion || !prenda.colorPrimario){
-      throw new exception(...)
+      throw new exception("La prenda generada no es valida. Debe tener tipo, material de construccion y color primario")
     }
     
     return prenda;
@@ -103,28 +103,25 @@ class RepositorioTipoPrendas{
     return INSTANCE
   }
   
-  List<String, String> tiposConCategorias
+  List<String> partesSuperiores
+  List<String> partesInferiores
+  List<String> calzados
+  List<String> accesorios
   
   
   buscarCategoria(String tipo){
     
-    
-    return categoria;
+    if(partesSuperiores.contains(tipo)) return CategoriaPrenda.PARTE-SUPERIOR
+    if(partesInferiores.contains(tipo)) return CategoriaPrenda.PARTE-INFERIOR
+    if(calzados.contains(tipo)) return CategoriaPrenda.CALZADO
+    if(accesorios.contains(tipo)) return CategoriaPrenda.ACCESORIO
+    else{
+    	throw new exception("El tipo de prenda ingresado no es valido")
+    }
   }
    
 }
 
-
-// hacemos al atributo final (no modificable) para que nadie
-   // lo pueda modificar y privado para que nadie lo pueda acceder externamente
-   private static final DragonQueConcedeDeseos INSTANCE = new DragonQueConcedeDeseos();
-
-   metodo static instance()
-	retornar  INSTANCE
-  
-   // hacemos el constructor privado, para que nadie más lo puede llamar
-   private constructor
-	...inicializamos al dragón...
 
 ~~~
 
