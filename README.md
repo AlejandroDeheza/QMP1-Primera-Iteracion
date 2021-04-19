@@ -47,7 +47,7 @@ class Prenda{
 
 
 enum CategoriaPrenda{
-  PARTE-SUPERIOR, CALZADO, PARTE-INFERIOR, ACCESORIOS
+  PARTE-SUPERIOR, CALZADO, PARTE-INFERIOR, ACCESORIO
 }
 
 class builderPrenda{
