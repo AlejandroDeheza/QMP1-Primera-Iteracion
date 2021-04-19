@@ -17,14 +17,14 @@ class Atuendo{
 }
 
 class Prenda{
-  TipoPrenda tipo
+  String tipo
   CategoriaPrenda categoria
   String materialConstruccion          ⚠️❔
   int[] colorPrincipal = new int[3];   ⚠️❔
   int[] colorSecundario = new int[3];
   
   
-  setTipo(TipoPrenda tipo){
+  setTipo(String tipo){
     TODO ❕
   }
   
@@ -45,10 +45,6 @@ class Prenda{
   }
 }
 
-enum TipoPrenda{
-  ZAPATO, CAMISA-MANGA-CORTA, PANTALON
-} //etc
-
 
 enum CategoriaPrenda{
   PARTE-SUPERIOR, CALZADO, PARTE-INFERIOR, ACCESORIOS
@@ -63,18 +59,21 @@ class builderPrenda{
   }
   
   getPrenda(){
+  
+    if(!prenda.tipo || !prenda.materialConstruccion || !prenda.colorPrimario){
+      throw new exception(...)
+    }
+    
     return prenda;
   }
   
   
   
   
-  
-  setTipo(TipoPrenda tipo){
+  setTipoConCategoria(String tipo){
     prenda.setTipo(tipo)
-  }
-  
-  setCategoria(CategoriaPrenda categoria){
+    CategoriaPrenda categoria = RepositorioTipoPrendas.instance().buscarCategoria(tipo)
+    
     prenda.setCategoria(categoria)
   }
   
@@ -92,6 +91,40 @@ class builderPrenda{
   
 
 }
+
+
+class RepositorioTipoPrendas{
+
+  private static final RepositorioTipoPrendas INSTANCE = new RepositorioTipoPrendas();
+  
+  private RepositorioTipoPrendas(){}  //constructor
+  
+  public static RepositorioTipoPrendas instance(){
+    return INSTANCE
+  }
+  
+  List<String, String> tiposConCategorias
+  
+  
+  buscarCategoria(String tipo){
+    
+    
+    return categoria;
+  }
+   
+}
+
+
+// hacemos al atributo final (no modificable) para que nadie
+   // lo pueda modificar y privado para que nadie lo pueda acceder externamente
+   private static final DragonQueConcedeDeseos INSTANCE = new DragonQueConcedeDeseos();
+
+   metodo static instance()
+	retornar  INSTANCE
+  
+   // hacemos el constructor privado, para que nadie más lo puede llamar
+   private constructor
+	...inicializamos al dragón...
 
 ~~~
 
