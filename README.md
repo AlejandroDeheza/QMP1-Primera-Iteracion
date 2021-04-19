@@ -61,7 +61,7 @@ class builderPrenda{
   getPrenda(){
   
     if(!prenda.tipo || !prenda.materialConstruccion || !prenda.colorPrimario){
-      throw new exception("La prenda generada no es valida. Debe tener tipo, material de construccion y color primario")
+      throw new exception("La prenda generada no es valida. Debe tener tipo de prenda, material de construccion y color primario")
     }
     
     return prenda;
@@ -70,8 +70,8 @@ class builderPrenda{
   
   
   
-  setTipoConCategoria(String tipo){
-    prenda.setTipo(tipo)
+  setTipoConCategoria(String tipoPrenda){
+    prenda.setTipo(tipoPrenda)
     CategoriaPrenda categoria = RepositorioTipoPrendas.instance().buscarCategoria(tipo)
     
     prenda.setCategoria(categoria)
@@ -109,12 +109,12 @@ class RepositorioTipoPrendas{
   List<String> accesorios
   
   
-  buscarCategoria(String tipo){
+  buscarCategoria(String tipoPrenda){
     
-    if(partesSuperiores.contains(tipo)) return CategoriaPrenda.PARTE-SUPERIOR
-    if(partesInferiores.contains(tipo)) return CategoriaPrenda.PARTE-INFERIOR
-    if(calzados.contains(tipo)) return CategoriaPrenda.CALZADO
-    if(accesorios.contains(tipo)) return CategoriaPrenda.ACCESORIO
+    if(partesSuperiores.contains(tipoPrenda)) return CategoriaPrenda.PARTE-SUPERIOR
+    if(partesInferiores.contains(tipoPrenda)) return CategoriaPrenda.PARTE-INFERIOR
+    if(calzados.contains(tipoPrenda)) return CategoriaPrenda.CALZADO
+    if(accesorios.contains(tipoPrenda)) return CategoriaPrenda.ACCESORIO
     else{
     	throw new exception("El tipo de prenda ingresado no es valido")
     }
